@@ -3,6 +3,7 @@
 
 1. 1st data set (mayo)
 should look like (as in ssinyu origin:)
+```text
 data_path
 ├── L067
 │   ├── quarter_3mm
@@ -25,3 +26,4 @@ data_path
     │       └── ...
     └── full_3mm
             └── ...     
+```
