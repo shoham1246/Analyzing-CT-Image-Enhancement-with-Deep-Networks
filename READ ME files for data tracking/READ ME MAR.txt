@@ -1,28 +1,22 @@
-----
-תיקיית דאטה מאר - READ ME
-----
-כל הדאטה סט בתיקייה, הורד מתוך ה-box הציבורי שנמצא בקישור:
-https://rpi.app.box.com/s/7p8tkqj5ewhtdad2h8kx975i9qg6b7a4/folder/230223517638 .
-בתוך תיקיית דאטה זו ישנם:
-א. READ ME הנ"ל
-ב. READ ME שהיה בתוך הבוקס של הדאטה
-ב. תיקיית train
-ג. תיקיית test
-ד. שלוש תיקיות body5 body8 body13 שהן המקור (כל הדאטה לקוח מתת התיקיות body5 body8 body13 בבוקס). בפועל לא נשתמש בתיקיות האלה; מהלנו גם בטריין וגם בטסט מכל שלושת הסוגים השונים כך שלדוגמא הטסט הוא לא biased.
-כל אחת מהתיקיות train, test מכילה 3 תיקיות, אחת לכל תיקיית מקור (body5 body8 body13). כל אחת משלושתן מכילה 2 תיקיות, gt ו-corrupted. כלומר התיקיות מכילות יחדיו צמדי דגימות של {תמונת קלט, תמונת השחזור המתאימה}.
-ניתן לראות ששמרנו בערך אותו יחס טריין-טסט (יחס של 0.92 0.08) כמו בדאטה של סט מאיו, כאשר היחס הוא היחס שבחר סיניו.
+MAR Data Folder - READ ME
+The entire dataset in this folder (DATA_MAR) was downloaded from the public Box found at this link:
+https://rpi.app.box.com/s/7p8tkqj5ewhtdad2h8kx975i9qg6b7a4/folder/230223517638.
 
-במקור, האחוז שהיוותה כל האחת מהשלוש מהדאטה סט (4748 שלושתן יחד):
-5 - 42%
-8 - 42%
-13 - 15%
-מכל אחת מהן נלקח 8% לטובת הטסט והשאר נשאר לאימון.
+Inside this data folder, there are 3 folders containing samples distributed according to the ratio stated in the report:
+a. train folder
+b. test folder
+c. validation folder
 
-לא רלוונטי:
-ב. תיקיית MetalCorrupted_gt שם נמצאות כל התמונות, בהן מופיעות שתלי מתכת - ללא הארטיפקטים (SNR מושלם)
-ג. תיקיית MetalCorrupted_noised שם באמצעות סימולציה התווספו לתמונות הgt ארטפקטים שמעוניינים שהרשת תסיר.
+Each of the train, test, and validation folders contains 3 subfolders, one for each source folder from the public Box (we only used the folders body5, body8, and body13). Each of these three subfolders contains 2 directories: gt and corrupted. This means the folders collectively hold sample pairs of {input image, corresponding restored image}.
 
-הכל לקוח מהbox הציבורי: https://rpi.app.box.com/s/7p8tkqj5ewhtdad2h8kx975i9qg6b7a4/file/1383558729192
-ספציפית מהתיקיה body13 שנמצאת בבוקס. בתוכה היה מספר סוגי תמונות, כאשר מה שעשינו שימוש היה:
-תוכן התיקיה א. מתאים לקבצי Target/train_head_nometal_img
-תוכן התיקיה ב. מתאים לקבצי Baseline/train_head_metalart_img
+Additionally, the test folder contains a test_masks directory, which holds a mask for each test sample so that performance metrics can be calculated regionally around the regions of interest (ROI).
+According to the split ratio we noted in the report (87% train, 8% test, 5% validation), the distribution in the test folder is as follows: 30 samples (12001-12030) belong to body13, another 80 samples (7001-7080) belong to body8, and another 80 samples (4001-4080) belong to body5.
+
+Note that for the validation set, 19 samples (12031-12049) belong to body13, another 50 samples (7081-7130) belong to body8, and another 50 samples (4081-4130) belong to body5.
+
+Originally, the percentage that each of the three folders constituted out of the total dataset (4748 samples in total) was:
+body5 - 42%
+body8 - 42%
+body13 - 15%
+
+Each of these three was internally divided into train, test, and validation folders according to the percentage ratios mentioned above.

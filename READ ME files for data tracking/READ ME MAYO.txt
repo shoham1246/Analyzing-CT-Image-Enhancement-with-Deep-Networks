@@ -1,16 +1,9 @@
-----
-תיקיית דאטה מאיו - READ ME
-----
-כל הדאטה סט בתיקייה, הורד מתוך ה-box הציבורי שנמצא בקישור: https://aapm.app.box.com/s/eaw4jddb53keg1bptavvvd1sf4x3pe9h.
-ניתן לראות שבתיקייה זו ישנם:
-א. ה- READ ME הנוכחי.
-ב. READ ME שהיה מצורף בתוך ה-box הציבורי. כרגע לא.
-ב. שתי תיקיות שמכילות תוכן דומה - כל אחת מתאימה לגרעין שחזור אחר שהופעל: B30, D45. שתיהן מתאימות לקוטר 3mm בהתאם לקוד שנמצא בגיט, עליו ביססנו את היסודות של הקוד של הפרויקט שלנו.
-עדכון: כרגע נשתמש רק בתיקיה B30 ולכן התיקיה של D45 לא מכילה דאטה.
+MAYO Data Folder - READ ME
+The entire dataset in this folder (3mmB30) was downloaded from the public Box found at this link: https://aapm.app.box.com/s/eaw4jddb53keg1bptavvvd1sf4x3pe9h.
 
-עבור כל אחת משתי התיקיות - הדאטה הורד מתוך תיקיות זיפ ב-box, שנמצאו בתוך התיקיות המתאימות בתוך תיקיית האב Patient_Data/Training_Image_Data.
+It can be seen that in this folder there are: 10 folders starting with the prefix 'L', each holding scans of a specific patient. The data was downloaded from the corresponding folder (3mmB30, quarter is 3mm and B30 is the kernel) within the parent folder in the public Box named: Patient_Data/Training_Image_Data.
 
-תיעוד מס' הקבצים בכל תיקייה והאחוז שלהם מכלל הדאטה סט (כל המטופלים):
+The percentage of each folder out of the entire dataset:
 L067 - 9%
 L096 - 13%
 L109 - 5%
@@ -21,5 +14,5 @@ L291 - 14%
 L310 - 8%
 L333 - 10%
 L506 - 8%
-לדוגמא חלוקה של 0.8 טריין 0.2 טסט תהיה להגדיר בתור טסט את: L192, L333.
-סיניו בחר את L506 בתור הטסט סט.
+
+As we documented regarding the split ratios in the report, for our project we chose L506 as the test set (8%), and L109 for the validation set (5%), with all the rest assigned to the training set.
