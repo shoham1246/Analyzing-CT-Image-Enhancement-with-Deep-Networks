@@ -7,6 +7,15 @@ Computed Tomography (CT) images are widely used in the medical field, and their 
 * **RED-CNN**: A Residual Encoder-Decoder Convolutional Neural Network evaluated initially on noisy CT images.
 * **UNet18**: An architecture based on UNet, utilizing ResNet18 as the encoder.
 
+The **RED-CNN** structure illustration:
+
+<img width="586" height="283" alt="image" src="https://github.com/user-attachments/assets/daf734b4-3f6d-4a37-9cba-f3e0b53d7376" />
+
+The **UNet18** structure illustration:
+
+<img width="360" height="707" alt="image" src="https://github.com/user-attachments/assets/e9a6e758-96bb-48fb-ac93-d3cd308f0b92" />
+
+
 We evaluated the performance of these models on two distinct datasets representing different defects: low-dose radiation noise (Poisson noise) and artifacts originating from artificial metal implants. Our analysis covers their generalization capabilities, advantages, disadvantages, and the impact of training strategies and hyperparameter tuning.
 
 ---
